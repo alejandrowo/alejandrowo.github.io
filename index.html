@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Skibidi Girl</title>
+  <style>
+    body {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+      background-image: ("rosa.webp");
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #noButton {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Quieres ser mi skibidi girl?</h1>
+  <button id="yesButton">Sí</button>
+  <button id="noButton">No</button>
+
+  <script>
+    const noButton = document.getElementById('noButton');
+
+    noButton.addEventListener('mouseover', () => {
+      const bodyWidth = document.body.clientWidth - noButton.clientWidth;
+      const bodyHeight = document.body.clientHeight - noButton.clientHeight;
+      const randomX = Math.floor(Math.random() * bodyWidth);
+      const randomY = Math.floor(Math.random() * bodyHeight);
+      noButton.style.left = randomX + 'px';
+      noButton.style.top = randomY + 'px';
+    });
+    yesButton.addEventListener('click', () => {
+      window.location.href = 'rosas.html';
+    });
+  </script>
+</body>
+</html>
